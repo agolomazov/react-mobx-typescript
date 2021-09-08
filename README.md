@@ -1,4 +1,4 @@
-# Заготовка под проект на react-redux стеке
+# Заготовка под проект на React-Mobx стеке
 
 Репозиторий проекта: [GitLab](http://gitlab.id-mt.ru/ui)
 
@@ -29,6 +29,8 @@
 - [Eslint](https://eslint.org/)
 - [Stylelint](https://stylelint.io/)
 - [Prettier](https://prettier.io/)
+- [Husky](https://github.com/typicode/husky)
+- [Lint-staged](https://github.com/okonet/lint-staged)
 
 ### Кодстайл
 
@@ -110,7 +112,7 @@ http://localhost:3000/#/
 |   +---processes                                             : БИЗНЕС ЛОГИКА ПРИЛОЖЕНИЯ
 |   |   \---situations                                          : Бизнес логика по каждой ЖС
 |   |
-|   \---store                                                 : НАСТРОЙКИ REDUX
+|   \---store                                                 : НАСТРОЙКИ MOBX-STORE
 ```
 
 ### Версионирование
