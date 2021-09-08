@@ -1,0 +1,609 @@
+@import '../variables/themes/_nova.scss';
+
+@media (max-width: 1365.98px) {
+  .sidebar {
+    margin-left: -22.4rem;
+    overflow-y: visible;
+    transition: margin-left .3s;
+    &.open {
+      margin-left: 0;
+    }
+    &:hover {
+      overflow-x: visible;
+    }
+  }
+
+  .content-box {
+    margin-left: 0;
+  }
+
+  .personal-box {
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .title-footer {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1212px) {
+  .light-box-wrapper {
+    overflow-y: auto;
+    .icon-close {
+      display: block;
+    }
+  }
+  .light-box-mobile-controls,
+  .light-box-cross-main {
+    display: none;
+  }
+
+  .preview-documents {
+    .light-box-window {
+      width: 100%;
+    }
+    .light-box-heading {
+      button:not(.icon-close), .dropdown-wrapper {
+        display: none;
+      }
+    }
+    .light-box-footer {
+      display: block !important;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-txt-default {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .xs-sm-none {
+    display: none !important;
+  }
+
+  .wide-button {
+    max-width: 28.8rem;
+    width: 100%;
+  }
+
+  .large-mobile {
+    padding: .7rem 2.4rem !important;
+    &:focus {
+      padding: 0.6rem 2.3rem !important;
+    }
+  }
+
+  .auto-dropdown {
+    .dropdownselect-input-wrapper {
+      height: auto;
+    }
+  }
+
+  .staff-input {
+    input {
+      padding: .4rem .4rem .4rem 1.2rem;
+      & + div {
+        padding: 0 .4rem .4rem 1.2rem;
+      }
+    }
+  }
+
+  .fixed-loader {
+    width: 100vw;
+    left: 0;
+  }
+
+  .sberid-button {
+    justify-content: center;
+    max-width: 28.8rem;
+    width: 100%;
+  }
+
+  .pagination-wrapper {
+    justify-content: center;
+    width: 100%;
+    padding: 1.2rem;
+    .pagination-label-options,
+    .pagination-label-info {
+      display: none;
+    }
+  }
+
+  .stamp-documents-card {
+    margin: 0 -2.4rem .8rem -2.4rem;
+    tr {
+      align-items: center;
+    }
+  }
+
+  .pagination-documents-card {
+    .pagination-wrapper {
+      justify-content: start;
+      width: auto;
+    }
+  }
+
+  .reg-page {
+    &-form {
+      padding-top: 6rem;
+    }
+    &-bg {
+      background-image: url(https://cdn.esphere.ru/images/hypotheses/kedo/bg-reg-mobile.png);
+      background-position: center;
+    }
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 24.8rem;
+    margin-left: -28.8rem;
+    margin-top: 0;
+    & > nav {
+      width: 24.7rem;
+    }
+    .modal-cross {
+      display: block;
+      top: 0;
+      right: -.8rem;
+    }
+  }
+
+  .dark-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($gray-base, 0.8);
+    z-index: 13;
+  }
+
+  .filter {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .filter-doc {
+    .w-25 {
+      dt {
+        width: 29%;
+      }
+      dd {
+        padding-left: 30%;
+      }
+    }
+  }
+
+  .table-collapse {
+    .collapse-heading-wrapper {
+      display: block;
+    }
+    .collapse-heading-icon {
+      left: 1.6rem;
+    }
+  }
+
+  .table:not(.table-documents-card) {
+    table {
+      display: block;
+      tr.active {
+        background-color: transparent;
+      }
+    }
+    thead {
+      display: none;
+    }
+    tbody {
+      display: block;
+      tr {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        border-top: .1rem solid $black-05;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      tr:first-of-type {
+        border-top: none;
+      }
+      td {
+        display: block;
+      }
+    }
+    &.mobile-table-notification {
+      tr:first-of-type {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .table-tr-indent {
+    padding-top: 1.6rem;
+    padding-bottom: .8rem;
+  }
+
+  .table-td-indent {
+    padding: 0 3.2rem 1.6rem 0 !important;
+  }
+
+  .table-td-icon-indent {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .table-td-icon-position {
+    position: absolute;
+    right: 0;
+    top: 1.6rem;
+  }
+
+  .mobile-table-doc {
+    tbody {
+      padding: 2.4rem 2.4rem 4.4rem;
+      tr:first-of-type {
+        padding-top: 1.6rem;
+      }
+      .mobile-table-status {
+        width: 6rem;
+      }
+    }
+    & + .pagination-wrapper {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: $text-reverse;
+    }
+  }
+
+  .table-with-checkbox {
+    tbody {
+      padding-bottom: 0;
+    }
+    tr {
+      padding-left: 4rem;
+      td:first-of-type {
+        position: absolute;
+        top: .5rem;
+        left: -1.2rem;
+      }
+    }
+  }
+
+  .table-bottom-panel,
+  .table-bottom-panel-card {
+    .checkbox-wrapper {
+      width: 2rem;
+    }
+  }
+
+  .table-bottom-panel-card {
+    width: calc(100% + 4.8rem);
+    margin-left: -2.4rem;
+    margin-right: -2.4rem;
+  }
+
+  .mobile-doc {
+    padding: 0;
+    .tabs-container {
+      padding: 0 2.4rem;
+      background-color: $black-07;
+      .tabs-item {
+        padding-top: 0;
+      }
+      ul div:nth-of-type(2) {
+        padding-bottom: 1.2rem;
+      }
+    }
+  }
+
+  .modal-wrapper {
+    .modal-window {
+      display: flex;
+      flex-direction: column;
+      width: 100% !important;
+      max-width: 100%;
+      height: 100%;
+      padding-bottom: 0;
+      top: 0;
+      border-radius: 0;
+      .modal-cross {
+        display: none;
+      }
+      .modal-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        z-index: 1;
+      }
+      .modal-body {
+        flex: 1 0 auto;
+        border-radius: 0;
+      }
+      .modal-footer {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+      }
+      .modal-alert {
+        border-radius: 0;
+      }
+      .list {
+        dt {
+          width: 100%;
+          float: none;
+        }
+        dd {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .modal-body-indent,
+  .modal-indent {
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+  }
+
+  .modal-alert-overlay {
+    height: 100%;
+  }
+
+  .info-modal {
+    .modal-window {
+      height: auto;
+      width: 48rem !important;
+      top: 6.4rem;
+      padding-bottom: 6.4rem;
+      border-radius: 1.6rem;
+      .modal-header {
+        border-radius: 1.6rem 1.6rem 0 0;
+      }
+      .modal-body {
+        min-height: 28rem;
+        border-radius: 0 0 1.6rem 1.6rem;
+      }
+      img {
+        height: 3.2rem;
+      }
+    }
+  }
+
+  .light-box-wrapper {
+    .list {
+      dt {
+        float: none;
+        width: 100%;
+        label:first-of-type {
+          margin-top: 0;
+        }
+      }
+      dd {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .filedrop-wrapper {
+    border: none;
+  }
+
+  .light-box-wrapper,
+  .modal-wrapper {
+    .filedrop-description {
+      align-items: flex-start !important;
+      div {
+        justify-content: flex-start !important;
+      }
+    }
+  }
+
+  .k-sms-box {
+    width: 100%;
+    max-width: 28.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .filedrop-delete-button {
+    min-width: 3.6rem !important;
+  }
+
+  .personal-box {
+    padding: 0 .8rem 0 2rem;
+  }
+
+  .reg-page {
+    &-block {
+      width: 100%;
+    }
+    &-title {
+      h2 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+      img {
+        height: 5.6rem;
+      }
+    }
+  }
+
+  .register-documents-card {
+    .table-td-icon-position {
+      top: auto !important;
+      bottom: 5.2rem;
+    }
+  }
+
+  .stamp-documents-card {
+    margin: 0 -1.6rem .8rem -1.6rem;
+  }
+
+  .pagination-documents-card {
+    height: auto;
+    .pagination-wrapper {
+      justify-content: center;
+    }
+    button {
+      position: relative;
+    }
+  }
+
+  .title-documents-card {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .mobile-table-doc {
+    tbody {
+      padding: 2.4rem 1.6rem 4.4rem;
+    }
+  }
+
+  .table-with-checkbox {
+    tbody {
+      padding-bottom: 0;
+    }
+    tr {
+      padding-left: 3.2rem;
+    }
+  }
+
+  .table-bottom-panel-card {
+    width: calc(100% + 3.2rem);
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+  }
+
+  .notification-sidebar {
+    width: 100vw;
+    margin-right: -100vw;
+    h3 {
+      font-size: 2.1rem;
+      line-height: 3.2rem;
+    }
+    .tabs-container {
+      &:after {
+        top: 10.4rem;
+      }
+    }
+    .tabs-item {
+      padding: 1.2rem 1rem;
+      &.notification-new {
+        &::before {
+          right: -.1rem;
+        }
+      }
+    }
+    .notification-card {
+      h4 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        + span {
+          font-size: 1.2rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .collapse {
+    .collapse-heading-wrapper {
+      padding: 2rem 1.6rem;
+      .collapse-heading-icon {
+        height: 2rem;
+        width: 1.2rem;
+      }
+      & + div {
+        > div {
+          padding: 2.4rem 1.6rem;
+        }
+      }
+    }
+  }
+
+  .mobile-sert {
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+    h3 {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .header-button-group {
+    display: flex;
+    margin-right: -1.6rem;
+    margin-left: -1.6rem;
+    overflow-x: auto;
+    .button-group-buttons-wrapper {
+      margin: 0 1.6rem;
+    }
+  }
+
+  .mobile-doc {
+    .tabs-container {
+      padding: 0 1.6rem;
+    }
+  }
+
+  .mobile-empty {
+    div > img {
+      height: 3.2rem;
+    }
+  }
+
+  .modal-body-indent {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+
+  .modal-indent {
+    padding: 1.6rem;
+  }
+
+  .info-modal {
+    .modal-window {
+      height: 100%;
+      width: 100% !important;
+      top: 0;
+      padding-bottom: 0;
+      border-radius: 0;
+      .modal-header {
+        border-radius: 0;
+      }
+      .modal-body {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .notifications-top {
+    width: 28rem;
+    right: 1.6rem;
+  }
+
+  .filedrop-description {
+    div > img {
+      height: 3.2rem;
+    }
+  }
+
+  .padding-bottom-profile {
+    padding-bottom: 11.2rem !important;
+  }
+
+  .change-account-loader {
+    p {
+      top: calc(50% + 10rem);
+    }
+  }
+}

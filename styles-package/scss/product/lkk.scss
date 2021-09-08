@@ -1,0 +1,435 @@
+@import "../variables/themes/_nova.scss";
+
+/* START правки из-за устаревшего Кендо */
+
+@font-face {
+  font-family: 'WebComponentsIcons';
+  src: url("../../fonts/kendo-glyphs/WebComponentsIcons.woff2"),
+       url("../../fonts/kendo-glyphs/WebComponentsIcons.woff"),
+       url("../../fonts/kendo-glyphs/WebComponentsIcons.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.i-button {
+  &:hover, &.active {
+    &::before {
+      color: $black-01;
+    }
+  }
+}
+
+.k-dropdown {
+  background-color: transparent;
+}
+
+.k-upload {
+  margin-bottom: 1.6rem;
+}
+
+.nova .k-upload-button {
+  margin-top: 0;
+  padding: 0.7rem 2.4rem;
+  border-radius: 1.6rem;
+  line-height: 1.6rem;
+  color: $gray-darker;
+  background-color: $gray-lighter;
+  border-color: $black-06;
+}
+
+.k-checkbox-label::before,
+.k-checkbox-label::after {
+  display: inline-flex;
+}
+
+.message {
+  border-width: 0.1rem;
+}
+
+.k-radio-label::before,
+.k-radio:checked + .k-radio-label::after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Сокрытие старых блоков .k-upload для соответствия гайдам */
+
+.k-upload .k-upload-files,
+.k-upload .k-clear-selected,
+.k-upload .k-upload-selected {
+  display: none;
+}
+
+/* календарь */
+
+.k-animation-container .k-calendar-container {
+  width: 20.4rem;
+}
+
+.k-calendar {
+  & [class*="k-icon k-i-arrow-"],
+  & [class^="k-icon k-i-arrow-"] {
+    font-size: 2rem;
+  }
+
+  .k-nav-fast {
+    text-transform: none;
+  }
+
+  thead th {
+    padding: .8rem .2rem;
+  }
+
+  th {
+    line-height: inherit;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  & .k-header, 
+  & .k-header .k-link, 
+  & .k-footer, 
+  & .k-footer .k-link {
+    display: flex;
+    flex-direction: row;
+  }
+
+  & .k-header, 
+  & .k-footer {
+    position: relative;
+    text-align: center;
+  }
+
+  & .k-header .k-link,
+  & .k-footer .k-link {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* END правки из-за устаревшего Кендо */
+
+.auth .header, .widget .header .user-box {
+  display: none;
+}
+
+// Layouts
+
+.courier {
+  background-image: url('../../images/lkk/bg-courier.png');
+  background-position: 110% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 22.5rem;
+}
+
+.hand {
+  background-image: url('../../images/lkk/hand.png');
+  background-position: 95% 100%;
+  background-repeat: no-repeat;
+  background-size: auto 15rem;
+}
+
+.box-form {
+  .inner {
+    &:hover {
+      background-color: lightyellow;
+    }
+
+    &:not(:hover) .hide {
+      visibility: hidden;
+    }
+  }
+}
+
+// Notification
+
+.info-dcb {
+  .message {
+    background-color: $accent-05;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $accent-03;
+    color: inherit;
+    padding: 1rem 2rem;
+
+    a {
+      color: inherit;
+    }
+
+    .button {
+      border-color: inherit;
+    }
+  }
+}
+
+.message .list-item {
+  padding-left: 1.6rem;
+}
+
+// Dropzone
+
+.upload {
+  .k-upload {
+    margin-bottom: 1.6rem;
+  }
+
+  .k-dropzone {
+    display: block;
+
+    em {
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+
+  .k-button {
+    border-color: transparent;
+    color: $text-reverse;
+    padding: 0.5rem 1.9rem;
+    margin-top: 1rem;
+  }
+}
+
+.sphere .upload .k-button {
+  background: steelblue;
+}
+
+.new .upload .k-button {
+  background: #2dba59;
+}
+
+.nova .upload .k-button {
+  background: $primary-02;
+  color: $white;
+  border-radius: 2.4rem;
+}
+
+.dcb .upload .k-button {
+  background: #4ea31e;
+}
+
+// Перекрашиваем активный пункт меню в nova
+.nova .header .menu-h li.level-1.active {
+  background: transparent;
+  color: $accent-02;
+}
+
+.bg-gray-05 {
+  background-color: $black-07;
+}
+
+.dcb .bg-gray-05,
+.sphere .bg-gray-05 {
+  background-color: $gray-lighter;
+}
+
+a, .button {
+  & > [class^="prodicon-"] {
+    color: inherit;
+  }
+
+  .txt-light-gray {
+    color: $black-04;
+  }
+}
+
+.txt-light-gray {
+  color: $black-04;
+}
+
+.icon-28 {
+  font-size: 2.8rem;
+}
+
+.icon-inline {
+  font-size: inherit;
+}
+
+.button.more {
+  line-height: 2.1rem;
+}
+
+.scroll-vertical-28 {
+  max-height: 28rem;
+  overflow-y: auto;
+}
+
+.col-2 > li {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.hover:hover {
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: $black-07;
+}
+
+.height-70 {
+  min-height: 7rem;
+}
+
+/* Кастомная дропзона */
+.upload-center {
+  .k-dropzone {
+    flex-direction: column;
+    padding: 2.4rem;
+    text-align: center;
+    em {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 1.6rem;
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+  .k-upload-button {
+    order: 1;
+    padding: 0.5rem 2.4rem;
+    border-radius: 1.6rem;
+    background-color: $white;
+  }
+}
+
+/* Логотип */
+.logo-container {
+  margin: -0.5rem 0;
+  img {
+    vertical-align: top;
+  }
+}
+
+/* QR код */
+
+.qr-code-container {
+  width: 8.4rem;
+  max-height: 8.4rem;
+  overflow: hidden;
+  border: 0.2rem solid $black-05;
+  border-radius: 1rem;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* START стили для виджета */
+.widget-fixed {
+  position: fixed;
+  bottom: 15%;
+  right: 1rem;
+  height: 5rem;
+  width:  5rem;
+  border-radius: 3rem;
+  background: $brand-warning;
+  color: $white;
+  padding: .5rem;
+  transition: ease .5s;
+  white-space: nowrap;
+  font-weight: 300;
+  opacity: .95;
+  cursor: pointer;
+
+  &:hover {
+    width: 25rem;
+    transition: ease .5s;
+  }
+
+  .txt {
+    overflow: hidden;
+  }
+
+  h2 {
+    line-height: 2.4rem;
+  }
+
+  & [class*="med-line-"],
+  & [class*="med-line-"]:after,
+  & [class*="med-line-"]:before {
+    font-size:   3rem;
+    line-height: 3rem;
+  }
+
+  & [class*="med-line-"]{
+    margin: 1rem 2rem 1rem 1rem;
+  }
+}
+
+.ringbase {
+  position:absolute;
+  top:  0;
+  left: 0;
+  width:  6rem;
+  height: 6rem;
+  border-radius: 3rem;
+  opacity: 0;
+  z-index: 10;
+}
+
+.ring1 {
+  box-shadow:0 0 .5rem 0 $white, inset 0 0 .5rem 0 $white;
+  animation: ring-in 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.ring2 {
+  box-shadow:0 0 1rem 0 $brand-warning, inset 0 0 1rem 0 $brand-warning;
+  animation: ring-out 2s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes ring-in {
+  0% {transform: scale(0.1, 0.1); opacity: 0.0;}
+  50% {opacity: 0.6;}
+  100% {transform: scale(1.1, 1.1); opacity: 0.0;}
+}
+
+@keyframes ring-out {
+  0% {transform: scale(1.1, 1.1); opacity: 0.0;}
+  50% {opacity: 0.6;}
+  100% {transform: scale(2, 2); opacity: 0.0;}
+}
+
+/* END стили для виджета */
+
+/* валидация */
+.k-textbox.k-warning {
+  border-color: $brand-warning;
+}
+
+/* общее */
+.transition-none {
+  transition: none;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.button-example {
+  cursor: auto;
+
+  &:active {
+    background-color: $white;
+  }
+
+  &:hover, &:active, &:not(.blank):focus, &.more:not(.blank):focus {
+    border-color: $black-05;
+  }
+
+  &:not(.blank):focus, &.more:not(.blank):focus {
+    border-width: 1px;
+    padding: .5rem;
+  }
+}
+
+.sphere .button-example {
+  &:active, &:hover {
+    background-color: $gray-lighter;
+  }
+
+  &:hover, &:active, &:not(.blank):focus, &.more:not(.blank):focus {
+    border-color: $gray;
+  }
+}

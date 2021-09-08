@@ -1,0 +1,497 @@
+@import '../variables/_base.scss';
+@import '../variables/themes/_nova.scss';
+
+$color-blue: #0B4288;
+$color-sky: #93B7ED;
+$color-sky-hover: #0F5498;
+$color-sky-active: #198CFE;
+
+.container-auth {
+  width: 45.2rem;
+}
+
+.title-block {
+  background-color: $black-07;
+}
+
+.txt {
+  &-light-gray {
+    color: $black-05;
+  }
+  &-blue {
+    color: $color-blue
+  }
+  &-sber-id-gray {
+    color: #9E9E9E;
+  }
+}
+
+.min-height-100 {
+  min-height: 100vh;
+}
+
+.bg-light-gray {
+  background-color: #fcfcfc;
+}
+
+.button-wrapper {
+  &.success {
+    background-color: $color-blue;
+    &:hover {
+      background-color: $color-sky-hover;
+    }
+    &:active {
+      background-color: $color-sky-active;
+    }
+    &.disabled,
+    &.disabled:hover {
+      background-color: $color-sky !important;
+    }
+  }
+  &.button-sber-id-success {
+    background-color: $primary-02;
+    &:hover {
+      background-color: $primary-03;
+    }
+    &:active {
+      background-color: $primary-01;
+    }
+  }
+  &.button-sber-id-default {
+    border-color: #767676;
+    &:hover {
+      border-color: #21A038;
+    }
+    &:focus {
+      padding: .7rem 2.4rem;
+      border-width: 1px;
+    }
+  }
+  &.blank {
+    color: $color-blue;
+    &:hover {
+      color: $color-sky-hover;
+    }
+    &:active {
+      color: $color-sky-active;
+    }
+  }
+  &.larger {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 2.4rem;
+    &:not(.blank):focus {
+      padding-top: 1.4rem;
+      padding-bottom: 1.4rem;
+    }
+  }
+}
+
+.opened .button-dropdown.blank,
+.button-dropdown.blank:focus {
+  padding: .7rem 4rem .7rem 2.4rem;
+}
+
+.opened .button-dropdown.blank::after,
+.button-wrapper.button-dropdown.blank:focus::after {
+  right: 1.7rem;
+}
+
+a,
+.txt-link,
+.dropdown-wrapper > ul > .dropdown-link > a:not(.button) {
+  color: $color-blue;
+  &:hover {
+    color: $color-sky-hover;
+  }
+  &:active {
+    color: $color-sky-active;
+  }
+}
+
+.product-item {
+  border: .2rem solid $black-06;
+  box-shadow: 0 .6rem 1rem rgba(31, 31, 34, 0.25);
+  border-radius: 2.4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sale-modal {
+  .modal-window {
+    width: 100rem;
+  }
+}
+
+.title-main {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.icon-24 {
+  font-size: 2.4rem;
+}
+
+.list-check {
+  > .endash::before {
+    content: "\2013";
+    top: 0;
+    left: -2rem;
+    color: $black-01;
+  }
+}
+
+.notification-blue {
+  circle {
+    fill: $color-blue;
+  }
+}
+
+.checkbox {
+  &-input:checked {
+    + .checkbox-label {
+      &::before,
+      &::after {
+        background-color: $color-blue;
+        border-color: $color-blue;
+      }
+      &:hover,
+      &:hover:not(.semi) {
+        &::before,
+        &::after {
+          background-color: $color-sky-hover;
+          border-color: $color-sky-hover;
+        }
+      }
+    }
+  }
+  &-label:hover::before {
+    border-color: $color-sky-hover;
+  }
+}
+
+.reg-separator {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 2.4rem);
+    border-top: 1px solid $black-05;
+    transform: translateY(-50%);
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+
+.sms-code-input {
+  &.small {
+    height: 4.8rem;
+    max-width: 4rem;
+    .input-element-wrapper {
+      .input-element {
+        font-size: 1.8rem;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .tariff {
+    &-header {
+      position: relative;
+      min-height: 11.3rem;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -4.5rem;
+        bottom: -1px;
+        width: 4.5rem;
+        border-bottom: 1px solid $black-06;
+      }
+    }
+    &-content {
+      background-color: $white;
+    }
+  }
+}
+
+@media (max-width: 1023.98px) {
+  [class*="input-wrapper"],
+  .password-element-wrapper,
+  [class*="input-wrapper"] > input[class*="input"],
+  .password-element-wrapper > input[class*="input"] {
+    height: 4.8rem;
+  }
+
+  .button-wrapper {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 2.4rem;
+    &:not(.blank):focus {
+      padding-top: 1.4rem;
+      padding-bottom: 1.4rem;
+    }
+  }
+
+  .message {
+    &,
+    &.warning,
+    &.danger {
+      background-color: #f3f5f7;
+      border: #f3f5f7;
+    }
+  }
+
+  .tariff-header::after {
+    right: -3.7rem;
+    width: 3.7rem;
+  }
+}
+
+@media (max-width: 830.98px) {
+  .tariff-header {
+    min-height: 14.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+
+  .modal-cross {
+    right: 3.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .tariff {
+    &-row {
+      margin-left: -1.6rem;
+      margin-right: -1.6rem;
+      overflow-x: auto;
+    }
+    &-header::after {
+      right: -1.7rem;
+      width: 1.7rem;
+    }
+  }
+
+  .modal-footer {
+    background-color: $white;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product-info-logo {
+    height: 4.8rem;
+  }
+
+  .dropdown-header .button-wrapper.button-dropdown::after {
+    content: none;
+  }
+
+  .dropdown-header .button-wrapper.button-dropdown {
+    background-color: transparent;
+  }
+
+  .modal-window {
+    &.sm,
+    &.md,
+    &.lg {
+      .modal-body {
+        min-height: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+
+  .tariff-row {
+    margin-left: -3.2rem;
+    margin-right: -3.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .modal-window {
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 497.98px) {
+  .tariff-header {
+    min-height: 11.3rem;
+  }
+}
+
+@media (min-width: 498px) and (max-width: 575.98px) {
+  .tariff-header {
+    min-height: 8.1rem;
+  }
+}
+
+// Стили для прежнего дизайна для работы одного из стендов.
+// Удалим, когда определимся с вариантом дизайна.
+
+.auth-2-wrapper {
+  width: 40rem;
+}
+
+.col-left {
+  width: 62rem;
+}
+
+.sms-code-input {
+  height: 7.2rem;
+  max-width: 5.8rem;
+  .input-element-wrapper {
+    height: 100% !important;
+    .input-element {
+      height: 100% !important;
+      font-size: 3.2rem;
+      line-height: 1.4;
+      padding: 0 1.2rem;
+      text-align: center;
+    }
+  }
+}
+
+.carousel {
+  &-wrapper {
+    margin: 0 auto;
+    max-width: 81rem;
+    position: relative;
+  }
+  &-wrapper-images {
+    text-align: center;
+    img {
+      display: inline-block;
+      max-width: 60%;
+      max-height: 50vh;
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    background: $white;
+    color: $black-02;
+    border-radius: 50%;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  &-pagination-wrapper {
+    padding: 2.4rem 0;
+    li {
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      border: 1px solid $white;
+      border-radius: 50%;
+      height: .8rem;
+      width: .8rem;
+      background: transparent;
+      margin-right: .7rem;
+      &.active,
+      &:hover {
+        background: $white;
+      }
+    }
+  }
+}
+
+.dropdown-wrapper.auth-dropdown ul {
+  min-width: 25.2rem;
+  left: -1.2rem;
+}
+
+.auth-title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.bg {
+  &-malachite {
+    background-color: $primary-02;
+  }
+  &-white {
+    background-color: $white;
+  }
+}
+
+.select-cert-active-item {
+  background-color: $base-06;
+}
+
+.prev-design {
+  h1 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .button-wrapper {
+    &.success {
+      background-color: #107f8c;
+      &:hover {
+        background-color: #21a19a;
+      }
+      &:active {
+        background-color: #005e7f;
+      }
+      &.disabled,
+      &.disabled:hover {
+        background-color: #90d0cc !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .sm-inner-8 {
+    padding: .8rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .banner-none {
+    display: none;
+  }
+  .col-left,
+  .auth-2-wrapper {
+    width: auto;
+  }
+  .col-left {
+    padding: .8rem;
+  }
+  .button-group-wrapper .button-wrapper {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}

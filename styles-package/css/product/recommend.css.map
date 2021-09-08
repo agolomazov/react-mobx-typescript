@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "recommend.css",
+	"sources": [
+		"../../scss/product/recommend.scss"
+	],
+	"names": [],
+	"mappings": "AACA,AAAA,SAAS,CAAC;EACR,MAAM,EAAE,eAAe,GAIxB;EALD,AAEE,SAFO,GAEL,IAAI,CAAC;IACL,MAAM,EAAE,KAAK,GACd"
+}

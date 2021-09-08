@@ -1,0 +1,38 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {},
+  "extends": [
+    "eslint:recommended",
+    "plugin:compat/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "airbnb-typescript",
+    "plugin:react-hooks/recommended",
+    "./webpack/eslint/index.js"
+  ],
+  "plugins": ["deprecation", "@typescript-eslint", "sonarjs", "react-hooks"],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "it": true,
+    "expect": true,
+    "test": true,
+    "describe": true,
+    "beforeEach": true,
+    "beforeAll": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

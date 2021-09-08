@@ -1,0 +1,87 @@
+@import '../variables/themes/_nova.scss';
+
+/// Хедер
+
+.personal-box {
+  .user-name {
+    flex-wrap: wrap;
+    max-width: 24rem;
+
+    &.button-wrapper {
+      padding: 0 2.4rem !important;
+      border-width: .2rem;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.panel-color {
+  background-color: $black-07;
+}
+
+.nav-tabs > ul {
+  background-color: $white;
+}
+
+/// Хелперы
+
+.height-100-vh {
+  height: 100vh;
+}
+
+.declarations-list > .declarations-list-item {
+  padding-bottom: .4rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+//баннер
+
+.icon-48 {
+  font-size: 4.8rem;
+}
+
+//таблица отчетов
+
+.table-row-controls td {
+  padding-top: 2.4rem !important;
+  padding-bottom: 2.4rem !important;
+  background-color: $black-06;
+}
+
+.chosen-row, .chosen-row:hover {
+  background-color: $black-06 !important;
+}
+
+.checkbox-single > .checkbox-wrapper {
+  position: relative;
+  top: -.4rem;
+}
+
+.checkbox-align {
+  vertical-align: middle;
+
+  & .checkbox-label::after, & .checkbox-label::before {
+    top: 1px;
+  }
+}
+
+//форма отправки отчетов
+
+.form > dd {
+  padding-bottom: 1.6rem;
+}
+
+.textarea-height textarea {
+  min-height: 8rem;
+}
+
+//лайтбокс конструктора отчёта
+
+.check-boxes {
+  li {
+    margin-right: 1.6rem;
+  }
+}

@@ -1,0 +1,808 @@
+@import '../variables/themes/_nova.scss';
+
+// VARIABLES
+$header-height: 6rem;
+$hamburger: $primary-02;
+$light-gray: #fcfcfc;
+$link-color: $secondary-02;
+$link-hover: $secondary-01;
+$dark-blue: #00347A;
+// END VARIABLES
+
+// PROJECT HELPERS
+.min-height-100 {
+  //ie fix
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.dropdown-header {
+  .button-wrapper.button-dropdown {
+    padding: 0.7rem 4rem 0.7rem 2.4rem;
+  }
+}
+
+.dropdown-wrapper > ul.pos-top {
+  bottom: 100%;
+}
+
+.bg-light-gray {
+  background-color: $light-gray;
+}
+
+.bg-gray-05 {
+  background-color: $black-07;
+}
+
+.txt-light-gray {
+  color: $black-04 !important;
+}
+
+.font-size-16 {
+  font-size: 1.6rem;
+}
+
+// END PROJECT HELPERS
+
+// CUSTOM THEME
+body {
+  background-color: $gray;
+}
+
+a {
+  &:hover {
+    color: $secondary-03;
+  }
+  &:active {
+    color: $secondary-01;
+  }
+}
+
+.checkbox-input:not(:disabled):checked + .checkbox-label::before,
+.checkbox-input:not(:disabled):checked + .checkbox-label:not(.semi)::after {
+  background-color: $secondary-02;
+  border-color: $secondary-02;
+}
+
+.checkbox-input:not(:disabled):checked + .checkbox-label:hover::before,
+.checkbox-input:not(:disabled):checked + .checkbox-label:not(.semi):hover::after {
+  background-color: $secondary-03;
+  border-color: $secondary-03;
+}
+
+.checkbox-label:hover::before {
+  border-color: $secondary-02;
+}
+
+.radio-button {
+  &-input:checked + .radio-button-label{
+    &::before {
+      background-color: $secondary-02;
+      border-color: $secondary-02;
+    }
+    &:hover::before {
+      background-color: $secondary-01;
+      border-color: $secondary-01;
+    }
+  }
+  &-label:hover::before {
+    border-color: $secondary-02;
+  }
+}
+
+button.button-wrapper:not(.button-default) {
+  &.success, &.primary {
+    background-color: $secondary-02;
+    &:not(:focus) {
+      border-color: $secondary-02;
+    }
+    &:hover {
+      background-color: $secondary-03;
+      border-color: $secondary-03;
+    }
+    &:active {
+      background-color: $secondary-01;
+      border-color: $secondary-01;
+    }
+  }
+}
+
+.button-wrapper.disabled.success:hover,
+.button-wrapper.disabled.success,
+.button-wrapper.disabled.primary:hover,
+.button-wrapper.disabled.primary {
+  background-color: $secondary-04 !important;
+  border-color: transparent !important;
+}
+
+.button-wrapper.blank:hover {
+  color: $secondary-03;
+}
+
+.button-wrapper.more.padding-none {
+  border-radius: 0;
+}
+
+.count.primary,
+.count.success,
+.success.tag:before,
+.success.count,
+.sidebar ul > li::after {
+  background-color: $secondary-02;
+}
+
+.tabs-container {
+  .tabs-item {
+    &.active::after {
+      background-color: $secondary-02;
+    }
+    &:not(.active):not(.disabled):hover::after {
+      background-color: $secondary-03;
+    }
+  }
+}
+
+.txt {
+  &-success:not(.txt-default) {
+    color: $secondary-02;
+  }
+}
+
+.sidebar ul {
+  > li {
+    &.active {
+      > a {
+        background-color: $secondary-05;
+      }
+      &.danger {
+        > a {
+          background-color: $error-05;
+        }
+        &::after {
+          background-color: $error-01;
+        }
+      }
+    }
+    &::after {
+      background-color: $secondary-01;
+    }
+    &.danger > a {
+      color: $brand-danger;
+    }
+  }
+}
+
+.statusbar {
+  &-status-item {
+    .success::before {
+      background-color: $secondary-02;
+    }
+    .progress::before {
+      background-image: none;
+      border: 2px solid $secondary-02;
+      color: $secondary-02;
+      font-weight: 600;
+    }
+  }
+  &-line {
+    background-color: $secondary-02;
+  }
+}
+
+.personal-box button.more {
+  &.active i,
+  &:active i {
+    color: $secondary-02;
+  }
+}
+
+// END THEME
+
+// CUSTOM
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $white;
+
+  .personal-box {
+    .user-name {
+      text-align: left;
+      max-width: 25rem;
+    }
+    .button-dropdown:hover {
+      background-color: $black-07;
+    }
+    .opened .button-dropdown:hover {
+      background-color: $black-05;
+      border: 2px solid $focus-border;
+    }
+  }
+
+  .button-wrapper.button-dropdown {
+    border-width: .2rem;
+    padding: .7rem 3.6rem .7rem .8rem !important;
+    &::after,
+    &:focus::after {
+      right: .8rem;
+    }
+  }
+
+  .color-logo {
+    color: $dark-blue;
+  }
+}
+
+.hamburger {
+  .bar {
+    background-color: $secondary-02;
+    transition: 0.3s;
+  }
+  &.open {
+    .bar-1 {
+      top: 0.8rem;
+      transform: rotate(45deg);
+    }
+    .bar-2 {
+      top: 0.8rem;
+      transform: rotate(-45deg);
+    }
+    .bar-4 {
+      opacity: 0;
+    }
+  }
+  &.button-wrapper {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 2rem;
+    border: none;
+    &:focus {
+      padding: 0;
+    }
+    &:active {
+      background-color: transparent;
+    }
+  }
+}
+
+.sidebar {
+  background-color: transparent;
+  border-right: 0;
+  overflow: hidden;
+  margin-left: -$sidebar-width;
+  margin-top: 6rem;
+  transition: 0.3s ease margin-left;
+  &.visible {
+    margin-left: 0;
+    transition: 0.3s ease margin-left;
+  }
+  .aside-menu-list {
+    background-color: $body-bg;
+    border-right: 1px solid $black-05;
+    height: calc(100% - 17.2rem);
+    margin-bottom: 5.6rem;
+    margin-top: 5.6rem;
+    overflow: auto;
+    padding-bottom: .8rem;
+    padding-top: 0;
+    position: fixed;
+    width: 22.4rem;
+    .count {
+      font-size: .9rem;
+      line-height: 1.6rem;
+      min-width: 1.6rem;
+      margin-top: .2rem;
+      padding: 0 0.2rem;
+    }
+  }
+  .fixed {
+    &-down {
+      border-right: 1px solid $black-05;
+      bottom: 0;
+      position: fixed;
+      width: 22.4rem;
+      z-index: 1;
+    }
+    &-input {
+      background-color: $body-bg;
+      border-right: 1px solid $black-05;
+      padding-bottom: .8rem;
+      padding-top: 1.6rem;
+      position: fixed;
+      width: 22.4rem;
+      z-index: 1;
+      .input-element-wrapper > input[class*="input"] {
+        padding-right: 1.2rem;
+      }
+    }
+  }
+  nav li,
+  [class*="level-"] > a,
+  [class*="level-"] > span {
+    white-space: normal;
+  }
+  ul > li::after {
+    height: 100%;
+  }
+}
+
+.wrapper {
+  max-width: 141.8rem;
+}
+
+.document-body {
+  background-color: $body-bg;
+  border-left: 1px solid $black-05;
+  border-right: 1px solid $black-05;
+  padding-top: $header-height;
+  padding-left: 0;
+  position: relative;
+  min-height: 100vh;
+  min-width: 102.3rem;
+  max-width: 138.4rem;
+  margin: 0 auto;
+}
+
+.content-box {
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.tabs-bar {
+  padding: 0 0.8rem;
+}
+
+.link {
+  color: $link-color;
+  [class^='prodicon-'],
+  [class*=' prodicon-'] {
+    color: $link-color;
+  }
+  a {
+    color: $link-color !important;
+  }
+  &:hover,
+  a:hover {
+    color: $link-hover !important;
+    [class^='prodicon-'],
+    [class*=' prodicon-'] {
+      color: $link-hover;
+    }
+  }
+}
+
+.aside-menu-button {
+  background-color: $black-07;
+  cursor: pointer;
+  span {
+    color: $text;
+  }
+  [class^='prodicon-'],
+  [class*=' prodicon-'] {
+    font-size: 1.6rem;
+    color: $link-color;
+    border: 0.2rem solid $link-color;
+    border-radius: 50%;
+  }
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.table {
+  th.checkbox-header {
+    text-overflow: inherit;
+    .checkbox-label {
+      margin-top: -.4rem;
+    }
+  }
+  table tr.selected td {
+    background-color: $black-06;
+  }
+  &-invoice {
+    th {
+      padding: 1.6rem .2rem;
+    }
+    td {
+      padding: 1.2rem .2rem;
+    }
+  }
+  tbody tr.no-hover:hover {
+    background-color: transparent;
+  }
+  tfoot {
+    &::before {
+      content: "";
+      display: block;
+      height: .6rem;
+    }
+    td {
+      background-color: $black-07;
+      &:first-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: .8rem;
+      }
+      &:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: .8rem;
+      }
+    }
+  }
+}
+
+.datepicker-wrapper-12 {
+  flex-grow: initial !important;
+  width: 12.5rem !important;
+}
+
+.sign {
+  position: relative;
+  &:after {
+    content: "";
+    background-color: $accent-02;
+    border-radius: .8rem;
+    min-width: .8rem;
+    min-height: .8rem;
+    position: absolute;
+    top: -.5rem;
+    right: -1rem;
+  }
+}
+
+.collapse-content {
+  border: 1px solid $border;
+  border-radius: .6rem;
+  margin-bottom: 1.6rem;
+  .collapse {
+    &-heading-wrapper {
+      align-items: center;
+      padding: 1.6rem 3.2rem;
+      h3 {
+        line-height: 2.4rem;
+      }
+    }
+  }
+}
+
+.area-dashed {
+  border: 1px dashed $border;
+  border-radius: .8rem;
+  padding: 1.6rem 3.2rem;
+  &:hover {
+    border-color: $text-color;
+    cursor: pointer;
+  }
+  h3 {
+    line-height: 2.4rem;
+  }
+}
+
+.invoice-grid {
+  td, th {
+    padding-left: .2rem;
+    padding-right: .2rem;
+  }
+  tr.no-hover:hover {
+    background-color: transparent;
+  }
+}
+
+.custom-numeric {
+  .numeric-text-box-input {
+    text-align: right;
+  }
+  &-sign {
+    color: $input-placeholder-color;
+    vertical-align: text-top;
+  }
+  [class^="numeric-text-box-arrow-"], &[class*="numeric-text-box-arrow-"] {
+    display: none;
+  }
+}
+
+button.blank {
+  &[class^="prodicon-"], &[class*=" prodicon-"] {
+    color: $black-04;
+  }
+}
+
+.light-box-no-overflow .notifications-wrapper {
+  z-index: 600;
+}
+
+.light-box-footer .progressbar-wrapper {
+  position: absolute;
+  margin-top: -2.6rem;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  height: .2rem;
+  .progressbar-fill {
+    background: $secondary-02;
+  }
+}
+
+.bottompanel-wrapper {
+  width: calc(100% - 6.4rem);
+  position: fixed;
+  bottom: 0;
+  transition: .3s;
+  padding-left: 0;
+  max-width: 135.4rem;
+
+  &.hidden {
+    bottom: -15rem !important;
+  }
+
+  .list-h > li {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.dark-panel-color {
+  background-color: $black-06;
+}
+
+.checkbox-single > .checkbox-wrapper {
+  position: relative;
+  top: -.4rem;
+}
+
+.list {
+  > dd {
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+  }
+  > dt {
+    padding-top: .8rem;
+  }
+}
+
+.form[class*="list"] dd {
+  min-height: 4.8rem;
+}
+
+.tags-item {
+  margin: 1.6rem 1.2rem 0 0;
+}
+
+.k-sms-box {
+  width: 20.4rem;
+  i {
+    color: $secondary-04;
+  }
+  input {
+    &:not(:placeholder-shown) {
+      + i[class^="prodicon-"] {
+        color: $secondary-02;
+      }
+    }
+    // для IE:
+    &:not(:-ms-input-placeholder) {
+      + i[class^="prodicon-"] {
+        color: $secondary-02;
+      }
+    }
+  }
+}
+
+.datepicker-wrapper {
+  width: 12.6rem;
+}
+
+.daterange-wrapper {
+  > .datepicker-wrapper {
+    width: 12.6rem;
+  }
+  .daterange-delimiter {
+    width: 1.8rem;
+  }
+}
+
+a.disabled {
+  background-color: transparent !important;
+  color: $secondary-04 !important;
+}
+
+.counterparty-autocomplete {
+  .nodata {
+    justify-content: normal;
+    min-height: auto;
+    padding: .4rem .8rem;
+  }
+  .list-separated > li {
+    padding: 0;
+  }
+}
+
+.list-separated {
+  > li:not(:last-child) {
+    position: relative;
+    &::after {
+      background-color: $black-05;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: .4rem;
+      position: absolute;
+      right: -.8rem;
+      top: calc(50% - .2rem);
+      width: .4rem;
+    }
+  }
+}
+
+.gray-box {
+  border-radius: .8rem;
+  background-color: $black-07;
+}
+
+.bside-panel {
+  right: 0;
+  position: absolute;
+  z-index: 9;
+  visibility: hidden;
+  .bg-gray-05 {
+    box-shadow: $shadow-menu-top-bar;
+    height: calc(100% - 6rem);
+    overflow-y: auto;
+    padding-top: 1.2rem;
+    position: fixed;
+    transform: translateX(-100%);
+    width: 42rem;
+  }
+
+  .list-h li {
+    margin-right: 1.6rem;
+  }
+
+  &.visible {
+    visibility: visible;
+  }
+
+  &-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    .gray-box {
+      background-color: $black-06;
+      border-radius: 1.6rem;
+    }
+  }
+
+  .tabs {
+    &-container {
+      border-bottom: 1px solid $black-05;
+    }
+    &-bar {
+      padding: 0 3.2rem;
+    }
+    &-item {
+      padding: .8rem 1.2rem;
+    }
+  }
+}
+
+.notification {
+  &-message {
+    background-color: $body-bg;
+    border-radius: .8rem;
+    box-shadow: $shadow-level-5;
+    margin-bottom: 1.6rem;
+    padding: 1.6rem 3.2rem 1.6rem 1.6rem;
+    position: relative;
+  }
+  &-close {
+    position: absolute;
+    right: .6rem;
+    top: .6rem;
+    i {
+      color: $black-05;
+    }
+  }
+}
+
+.count.sup {
+  height: .8rem;
+  min-width: .8rem;
+  top: .4rem;
+}
+
+.box-rubricator {
+  [class^="col-"] {
+    padding-left: .8rem;
+    padding-right: .8rem;
+  }
+  &-item {
+    height: 15.6rem;
+    &:hover {
+      border-color: $black-01;
+      cursor: pointer;
+    }
+  }
+  &-types {
+    background-color: $secondary-05;
+    border-radius: .4rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: .4rem;
+    padding: .4rem;
+  }
+  &-docs {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    max-height: 3.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  h4 {
+    height: 4.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.list-rubricator {
+  margin-bottom: 0;
+  > li {
+    padding-bottom: 1.6rem;
+    padding-top: 0;
+  }
+}
+
+.container-auth {
+  padding-top: 6rem;
+  width: 42.8rem;
+  .auth-separator {
+    align-items: center;
+    display: flex;
+    &::before,
+    &::after {
+      background-color: $black-05;
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+    }
+    &::before {
+      margin-right: .8rem;
+    }
+    &::after {
+      margin-left: .8rem;
+    }
+  }
+}
+
+// END CUSTOM
+
+// MEDIA QUERIES
+@media (min-width: 1130px) {
+  header .user-name.more {
+    max-width: 32.8rem;
+  }
+}
+
+@media (min-width: 1281px) {
+  .sidebar {
+    margin-left: 0;
+    margin-top: 0;
+    position: static !important;
+  }
+  .content-box {
+    width: 116rem;
+  }
+  .hamburger {
+    display: none !important;
+  }
+  .bottompanel-wrapper {
+    width: calc(100% - 28.8rem);
+  }
+}
+// END MEDIA QUERIES

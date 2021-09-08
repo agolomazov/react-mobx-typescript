@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "rub.css",
+	"sources": [
+		"../scss/rub.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,UAAU;EACR,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,2CAA2C,CAAC,eAAe,EAC3D,0CAA0C,CAAC,cAAc,EACzD,yCAAyC,CAAC,kBAAkB;EACjE,UAAU,EAAE,MAAM;;AAGpB,aAAa;AACb,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,gCAAgC;EAC7C,SAAS,EAAE,OAAO,GACnB"
+}

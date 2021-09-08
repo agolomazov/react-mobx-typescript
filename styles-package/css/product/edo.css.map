@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "edo.css",
+	"sources": [
+		"../../scss/product/edo.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,YAAY,EAAE,QAAQ,CAAC;EACnB,WAAW,EAAE,eAAe,GAC/B"
+}

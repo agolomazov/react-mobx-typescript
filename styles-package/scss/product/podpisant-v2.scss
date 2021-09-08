@@ -1,0 +1,185 @@
+@import '../variables/themes/nova';
+
+/// colors
+$logo-color: #00347a;
+$brand-color: $secondary-02;
+$brand-color-hover: $secondary-03;
+$brand-color-active: $secondary-01;
+$brand-color-disabled: #87b0ed;
+$green: #21a038;
+$green-hover: #1a802d;
+$green-active: #156624;
+
+/// controls
+
+.button-wrapper {
+  &.brand-color {
+    color: $white;
+    background-color: $brand-color;
+    border-color: transparent;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $brand-color-hover;
+    }
+
+    &:active {
+      background-color: $brand-color-active;
+    }
+
+    &.disabled {
+      background-color: $brand-color-disabled !important;
+      color: $white !important;
+    }
+  }
+}
+
+/// Registration
+
+.height-100-vh {
+  height: 100vh;
+}
+
+.panel-color {
+  background-color: $black-07;
+}
+
+.nav-tabs > ul {
+  background-color: $white;
+}
+
+.image-container {
+  border: 1px solid $black-06;
+  border-radius: 1.6rem;
+  background-color: $white;
+}
+
+.margin-registration {
+  margin-top: 8rem;
+}
+
+.certificate-box-height {
+  height: 25.1rem;
+}
+
+.title-huge {
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+}
+
+.margin-top-radio > .radio-button:not(:first-child) {
+  margin-top: 1.6rem;
+}
+
+.sber-id {
+  background-color: $green;
+  border-color: transparent;
+  color: $white;
+  &:hover {
+    background-color: $green-hover;
+  }
+  &:active {
+    background-color: $green-active;
+  }
+}
+
+.background-filler {
+  background-color: $secondary-04;
+}
+
+/// Хедер
+
+.logo-color {
+  color: $logo-color;
+}
+
+.personal-box {
+  .opened .button-dropdown {
+    border-color: transparent;
+  }
+
+  .user-name {
+    display: inline-block;
+    text-align: left;
+    max-width: 29.2rem;
+
+    &.button-wrapper.button-dropdown {
+      padding: .7rem 4rem .7rem 2.4rem !important;
+      border-width: .2rem;
+    }
+  }
+}
+
+// Page-----------------------------------------------------------------------------------------------------------------
+
+.panel-color {
+  background-color: $black-07;
+}
+
+// Table with documents-------------------------------------------------------------------------------------------------
+
+.tabs-max-width {
+  max-width: 115rem;
+}
+
+.tag.signed::before {
+  background-color: $brand-color;
+}
+
+// Tabs-----------------------------------------------------------------------------------------------------------------
+.tabs-item {
+  &.active::after {
+    background-color: $brand-color;
+  }
+  &:not(.active):not(.disabled):hover::after {
+    background-color: $brand-color-hover;
+  }
+}
+
+.tabs-warning::before {
+  content: '';
+  width: .8rem;
+  height: .8rem;
+  position: absolute;
+  top: 1.2rem;
+  right: .4rem;
+  border-radius: 50%;
+  background-color: $accent-02;
+}
+
+// Lightbox create document package---------------------------------------------------------------------------------
+
+.form-file-list .file-list {
+  margin-bottom: 1.1rem;
+
+  table {
+    margin-top: -1.6rem;
+  }
+}
+
+.list.form.inputs dd:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+// Lightbox create document package---------------------------------------------------------------------------------
+
+.collapse-heading-wrapper {
+  padding: 2rem 3.2rem;
+  border: 0;
+
+  & + div[aria-expanded='true'] {
+    border-top: 1px solid $black-06;
+  }
+}
+
+.border-radius-16 {
+  border-radius: 1.6rem;
+}
+
+// Profile--------------------------------------------------------------------------------------------------------------
+
+.list-large > dt, .list-large > dd {
+    padding-bottom: .4rem;
+    padding-top: .4rem;
+}

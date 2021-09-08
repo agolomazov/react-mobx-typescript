@@ -1,0 +1,823 @@
+@import '../variables/themes/_nova.scss';
+
+// Variables
+$success: $secondary-02;
+$success-hover: $secondary-03;
+$success-active: $secondary-01;
+$success-disabled: #87B0ED;
+$green: #21A038;
+$green-hover: #1A802D;
+$green-active: #156624;
+$blue-tag: #93B7ED;
+
+body > iframe {
+  border-width: 0;
+}
+
+// Controls
+.button-wrapper {
+  &.success {
+    background-color: $success;
+    border-color: transparent;
+    &:hover {
+      background-color: $success-hover;
+      border-color: transparent;
+    }
+    &:active {
+      background-color: $success-active;
+    }
+    &.disabled {
+      background-color: $success-disabled !important;
+    }
+  }
+  &.blank.more {
+    padding: 0 0.5rem;
+    &:hover > i {
+      color: $black-03;
+    }
+  }
+}
+
+.dropdown-wrapper.opened {
+  .button-dropdown.success {
+    background-color: $success-active;
+  }
+}
+
+.sberid-button {
+  background-color: $green;
+  color: $text-reverse;
+  border-color: transparent;
+  &:hover {
+    background-color: $green-hover;
+    color: $text-reverse;
+    border-color: transparent;
+  }
+  &:active {
+    background-color: $green-active;
+  }
+}
+
+.button-group-wide {
+  max-width: 44.4rem;
+}
+
+.button-group-item.active {
+  background-color: $success;
+  border-color: transparent;
+  color: $text-reverse;
+}
+
+.header-button-group {
+  .button-group-buttons-wrapper {
+    padding: .2rem .1rem;
+    border-radius: 1.6rem;
+    background-color: $text-reverse;
+  }
+  .button-group-item {
+    margin: 0 .1rem;
+    padding: .6rem 1.6rem !important;
+    border-radius: 1.4rem !important;
+    border: none;
+    &.active {
+      background-color: $black-05;
+      color: $text;
+    }
+    &:hover {
+      background-color: $black-07;
+    }
+  }
+}
+
+.header-tabs {
+  background-color: $black-07;
+}
+
+.text-button {
+  padding: 0;
+  border: none;
+  color: $success;
+  background-color: transparent;
+  &:hover,
+  &:active,
+  &:not(.blank):focus {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+  &:hover {
+    color: $primary-02;
+  }
+  &:active {
+    color: $secondary-01;
+  }
+}
+
+.banner-close-button {
+  position: absolute;
+  top: 1.2rem;
+  right: .8rem;
+}
+
+.filedrop-delete-button {
+  min-width: 5.2rem !important;
+  padding: 0 1.6rem 2.4rem 1.6rem !important;
+}
+
+.staff-input {
+  min-width: 0;
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    & + div {
+      padding: .5rem .4rem .7rem .7rem;
+    }
+  }
+}
+
+.change-account-dropdown {
+  .button-dropdown {
+    padding: 0 3.2rem 0 1.2rem !important;
+    &:focus::after {
+      right: 1rem;
+  }
+    &::after {
+      color: $text-reverse;
+      right: 1rem;
+    }
+  }
+  ul {
+    width: 14.8rem;
+  }
+  a {
+    min-width: 0 !important;
+    width: 14rem;
+  }
+  &.opened {
+    .button-dropdown {
+      background-color: $success-active;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.not-empty-list-tag {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: .6rem;
+    right: .6rem;
+    height: .8rem;
+    width: .8rem;
+    border-radius: 50%;
+    background-color: $accent-02;
+  }
+}
+
+// Layout
+.personal-box {
+  width: 100%;
+  height: 6rem;
+  padding: 0 .8rem 0 1.6rem;
+  position: fixed;
+  background-color: $success;
+  z-index: 11;
+  .button-wrapper {
+    max-width: 29.2rem;
+    &.blank.more {
+      &:hover {
+        background-color: $success-hover;
+      }
+      & > i {
+        color: $text-reverse;
+      }
+      &.active {
+        background-color: $success-active;
+      }
+    }
+    &.success {
+      &:active, &:focus {
+        border-color: transparent;
+      }
+    }
+    &.active {
+      background-color: $success-active;
+    }
+  }
+  .hamburger {
+    display: none;
+    height: 2.4rem;
+    width: 2.4rem !important;
+    .bar {
+      width: 2.4rem;
+    }
+    .bar-2 {
+      top: .6rem;
+    }
+    .bar-4 {
+      top: 1.2rem;
+    }
+    &-text {
+      position: absolute;
+      bottom: 0;
+      color: $text-reverse;
+      font-size: .9rem;
+      line-height: .9rem;
+      text-transform: lowercase;
+    }
+    i {
+      padding-left: .2rem;
+      padding-top: .1rem;
+    }
+  }
+}
+
+.sidebar {
+  height: calc(100% - 6rem);
+  margin-top: 6rem;
+  z-index: 12;
+  overflow: visible;
+  & > nav {
+    width: 22.3rem;
+  }
+  .aside-menu-list {
+    > li {
+      padding: 0;
+      &:hover > a {
+        background-color: transparent;
+      }
+      > a {
+        margin-left: 0;
+        padding: 1.4rem 1.2rem 1.4rem 1.6rem;
+      }
+      &::after {
+        background: $success;
+      }
+    }
+    > li.active {
+      [class^="prodicon-"],
+      [class*=" prodicon-"] {
+        color: $success;
+      }
+      > a {
+        padding: 1.4rem 1.2rem 1.4rem 1.6rem;
+      }
+    }
+  }
+  .modal-cross {
+    display: none;
+  }
+}
+
+.content-box {
+  margin-left: 22.4rem;
+  padding-top: 6rem;
+  padding-bottom: 0;
+  .wrapper {
+    min-height: calc(100vh - 6rem);
+    padding: 3.2rem 2.4rem;
+  }
+}
+
+.title-block {
+  background-color: $black-07;
+}
+
+.title-footer {
+  width: calc(100vw - 22.4rem);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.reg-page-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-not-auth {
+  .title-footer {
+    width: 100%;
+  }
+}
+
+.notification-sidebar {
+  height: calc(100vh - 6rem);
+  width: 42.2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 6rem;
+  margin-right: -42.2rem;
+  background-color: $black-07;
+  overflow: auto;
+  transition: margin-right .3s;
+  &.open {
+    margin-right: 0;
+  }
+  .tabs-container {
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: .1rem;
+      background-color: $black-05;
+      left: 0;
+      top: 10rem;
+    }
+  }
+  .tabs-item.notification-new {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1.2rem;
+      right: .4rem;
+      height: .8rem;
+      width: .8rem;
+      border-radius: 50%;
+      background-color: $accent-02;
+    }
+  }
+  .notification-card {
+    position: relative;
+    background-color: $reverse;
+    box-shadow: 0 .2rem .7rem rgba($black-01, 0.25);
+    border-radius: .8rem;
+    h4 + span {
+      padding-top: .2rem;
+    }
+    .notification-close-card {
+      position: absolute;
+      top: .5rem;
+      right: 0;
+      i {
+        color: $black-05;
+      }
+    }
+  }
+  .notification-tag {
+    position: relative;
+    top: -.1rem;
+  }
+}
+
+// Collapse
+.collapse {
+  .collapse-heading-wrapper {
+    padding: 2rem 3.2rem;
+    border-radius: 1.6rem;
+    transition: border-radius 250ms step-end 0s;
+    &.open-collapse {
+      border-radius: 1.6rem 1.6rem 0 0;
+      transition: border-radius 250ms step-start 0s;
+    }
+    .collapse-heading-icon {
+      height: 2.4rem;
+      width: 1.6rem;
+    }
+    & + div {
+      border: .1rem solid $black-05;
+      border-top: none;
+      border-radius: 0 0 1.6rem 1.6rem;
+    }
+    &:hover {
+      border-color: $black-05;
+    }
+    &:focus {
+      border-color: $focus-border;
+    }
+  }
+}
+
+.table-collapse {
+  .collapse-heading-wrapper {
+    position: relative;
+    padding: 0;
+    border: none;
+    td:first-of-type {
+      padding-left: 4.4rem !important;
+    }
+  }
+  .collapse-dropdown-element {
+    padding-left: 4.4rem;
+  }
+  .collapse-heading-icon {
+    position: absolute;
+    top: 1.6rem;
+    left: .8rem;
+  }
+}
+
+.dropdownselect-wrapper,
+.multiselect-wrapper {
+  .collapse-heading-wrapper {
+    position: relative;
+    margin-bottom: .2rem;
+    padding: .8rem .8rem .8rem 4.4rem;
+    line-height: 1.6rem;
+    border: none;
+    &:hover {
+      border-radius: .8rem;
+      background-color: $black-07;
+    }
+  }
+  .collapse-heading-icon {
+    position: absolute;
+    top: 0;
+    left: .4rem;
+  }
+  .collapse-dropdown-element {
+    margin-bottom: .2rem;
+    li {
+      margin-left: 3.2rem;
+      padding: .8rem 0 .8rem 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+// Profile
+.profile {
+  h3 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+
+// Table
+.table {
+  thead {
+    // До исправления стилей леды ->
+    i {
+      color: $black-03;
+      font-size: 1.4rem;
+    }
+    &::after {
+      height: 0;
+    }
+    // До исправления стилей леды <-
+  }
+  tr.active {
+    background-color: $black-06;
+  }
+  .checkbox-label {
+    margin-top: -.4rem;
+  }
+}
+
+.table-bottom-panel,
+.table-bottom-panel-card {
+  background-color: $black-06;
+  table {
+    border-spacing: 0 1.2rem !important;
+    tr:hover {
+      background-color: transparent;
+    }
+  }
+  &:before {
+    display: block;
+    position: absolute;
+    top: -6.4rem;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 6.4rem;
+    background: linear-gradient(rgba($text-reverse, 0) 0%, $text-reverse 100%);
+    pointer-events: none;
+  }
+}
+
+.table-bottom-panel {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+.margin-bottom-panel {
+  margin-bottom: 8rem;
+}
+
+.doc-status {
+  div {
+    width: 5.6rem;
+  }
+}
+
+// Удалить после переноса верстки
+.border-spacing-y-16 {
+  border-spacing: 0 1.6rem !important;
+}
+
+.inactive-row {
+  td {
+    color: $black-03;
+  }
+}
+
+.tag {
+  &.txt-gray {
+    color: $black-04;
+    &::before {
+      background-color: $black-04;
+    }
+  }
+}
+
+.count-employees {
+  width: 5.6rem;
+}
+
+.table-documents-card {
+  border-radius: .8rem;
+  background-color: $black-07;
+  tr:hover {
+    background-color: transparent;
+  }
+}
+
+.pagination-documents-card {
+  position: relative;
+  height: 4.8rem;
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.pagination-top-pos {
+  .suggestion-wrapper {
+    top: auto;
+    bottom: 100%;
+    box-shadow: $shadow-level-2-top;
+  }
+}
+
+// Subscription
+.subscription-rates {
+  .box {
+    padding: 0;
+    border-radius: 1.6rem;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 2.1rem;
+    line-height: 3.2rem;
+  }
+  .title {
+    height: 11.2rem;
+  }
+  h4 {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    span {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+    }
+  }
+  button {
+    width: 22rem;
+  }
+  .active-rate {
+    border-color: $primary-02;
+  }
+}
+
+.success-subscription {
+  margin-top: 10rem;
+  h3 {
+    font-size: 2.1rem;
+    line-height: 3.2rem;
+  }
+}
+
+// Registration page
+.reg-page {
+  &-bg {
+    background-image: url('https://cdn.esphere.ru/images/hypotheses/kedo/bg-reg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-title {
+    h2 {
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+  }
+  &-row {
+    height: 100vh;
+  }
+  &-form {
+    padding-top: 10%;
+    padding-bottom: 4.8rem;
+  }
+  &-block {
+    width: 44rem;
+  }
+  &-link {
+    position: absolute;
+    left: 1.2rem;
+    bottom: 1.6rem;
+  }
+}
+
+//Lightbox
+.light-box-wrapper {
+  .icon-close {
+    display: none;
+  }
+}
+
+// Modal window
+.modal-body-indent {
+  padding: 2.4rem 3.2rem;
+}
+
+.info-modal {
+  .modal-window {
+    .modal-body {
+      min-height: 52rem;
+    }
+  }
+  .modal-cross {
+    display: none;
+  }
+}
+
+.file-error-modal {
+  .modal-header {
+    background-color: $error-05;
+    border-bottom: .1rem solid $error-03;
+  }
+}
+
+.modal-alert {
+  min-height: 0;
+}
+
+.preview-modal {
+  .modal-body {
+    max-height: 76rem;
+    overflow-y: auto;
+  }
+}
+
+.preview-documents {
+  .light-box-window {
+    width: calc(100% - 16.8rem);
+  }
+  & + .light-box-cross {
+    right: 6.4rem;
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+
+// ProgressBar
+.progressbar-wrapper {
+  height: .4rem;
+}
+
+.progressbar-fill {
+  background: $success;
+}
+
+// Tabs
+.tabs-item {
+  &.active::after {
+    background-color: $success;
+  }
+  &:not(.active):not(.disabled):hover::after {
+    background-color: $success-hover;
+  }
+}
+
+// Loader
+.fixed-loader {
+  height: calc(100vh - 6.1rem);
+  width: calc(100vw - 24rem);
+  position: absolute;
+  top: 6rem;
+  left: 24rem;
+}
+
+.card-loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.change-account-loader {
+  p {
+    position: absolute;
+    top: calc(50% + 8rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+
+// Helpers
+.tag.new:before {
+  background-color: $blue-tag;
+}
+
+.tag.sent:before {
+  background-color: $success;
+}
+
+.cross-icon {
+  font-size: 2.6rem;
+  margin-top: -.3rem;
+  margin-left: -.4rem;
+}
+
+.block-inline {
+  display: inline-block !important;
+}
+
+.width-60 {
+  width: 60% !important;
+}
+
+.max-w-100 {
+  max-width: 100%;
+}
+
+.flex-row {
+  display: flex !important;
+}
+
+.height-100 {
+  height: 100vh;
+}
+
+.txt-largest {
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+}
+
+.margin-negative {
+  margin-right: -3.2rem;
+}
+
+.padding-bottom-profile {
+  padding-bottom: 8rem !important;
+}
+
+.txt-light-gray {
+  color: $black-04 !important;
+}
+
+.txt-dark-gray {
+  color: $text;
+}
+
+.txt-overflow-clip {
+  text-overflow: clip !important;
+}
+
+.big-textarea {
+  .textarea-input {
+    height: 33.2rem;
+  }
+}
+
+.k-sms-box {
+  .input-element-wrapper > input[class*="input"] {
+    padding: 0 .8rem;
+  }
+  .prodicon-refresh {
+    cursor: pointer !important;
+  }
+}
+
+.common-error {
+  margin-top: 10.4rem;
+}
+
+.notary-wrapper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  & > div {
+    width: 100%;
+  }
+}
+
+.label-in-two-lines {
+  margin-top: -.6rem !important;
+}
+
+.notification-login-failed {
+  top: 2.4rem;
+}
